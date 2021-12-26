@@ -46,7 +46,7 @@ public class BookController {
         }
     }
 
-    @PostMapping("/book")
+    @PostMapping("/")
     public ResponseEntity<Book> createTutorial(@RequestBody Book book) {
         try {
             Book _tutorial = bookRepository.save(book);

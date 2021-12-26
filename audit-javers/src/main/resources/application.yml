@@ -17,3 +17,8 @@ spring:
     console:
       enabled: true
       path: /h2-ui
+
+expert:
+  app:
+    jwtSecret: expertClubSecretKey
+    jwtExpirationMs: 86400000
