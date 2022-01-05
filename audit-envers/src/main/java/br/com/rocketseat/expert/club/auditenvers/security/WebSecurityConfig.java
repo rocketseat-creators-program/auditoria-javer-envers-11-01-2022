@@ -4,7 +4,6 @@ import br.com.rocketseat.expert.club.auditenvers.security.jwt.AuthEntryPointJwt;
 import br.com.rocketseat.expert.club.auditenvers.security.jwt.AuthTokenFilter;
 import br.com.rocketseat.expert.club.auditenvers.security.services.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

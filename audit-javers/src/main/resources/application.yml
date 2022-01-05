@@ -2,7 +2,7 @@ server:
   port: 8082
 spring:
   datasource:
-    url: jdbc:h2:mem:javersDB
+    url: jdbc:h2:file:/data/demo
     driverClassName: org.h2.Driver
     username: sa
     password: sa123
