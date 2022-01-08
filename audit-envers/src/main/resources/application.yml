@@ -15,7 +15,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-expert:
-  app:
-    jwtSecret: expertClubSecretKey
-    jwtExpirationMs: 86400000
+
+org:
+  hibernate:
+    envers:
+      revision_field_name: revision
+      audit_table_suffix: _aud
