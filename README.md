@@ -1,27 +1,24 @@
-# auditoria-javer-envers-28-12-2021
+<img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
 
-# Read Me First
-The following was discovered as part of building this project:
+## Comparando Auditoria entre Javers e Hibernate Envers
 
-* The original package name 'br.com.rocketseat.expert.club.audit-envers' is invalid and this project uses 'br.com.rocketseat.expert.club.auditenvers' instead.
+Utilizadno o banco de dados Oracle para gerar uma planilha excel através de uma função específica, liberando o back-end para continuar com o processamento necessário reduzindo assim o gargalo da operação. 
 
-# Getting Started
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### Diretório do Projeto
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.6.2/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.6.2/maven-plugin/reference/html/#build-image)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.6.2/reference/htmlsingle/#using-boot-devtools)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.2/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.6.2/reference/htmlsingle/#boot-features-jpa-and-spring-data)
+```sh
+.
+├── script/       # script que contém o SQL necessário para rodar o projeto
+├── src/          # armazena código para consumo do spring
+├── .gitignore    # arquivos que são desconsiderados pelo git
+├── pom.xml       # dependências do projeto
+└── README.md
+```
 
-### Guides
-The following guides illustrate how to use some features concretely:
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
+## Expert
 
+| [<img src="https://avatars.githubusercontent.com/u/1785791?s=400&u=cf86c9ae2216765f948ca2136eda7e632e0cd922&v=4" width="75px;"/>](https://github.com/gustavodsf) |
+| :-: |
+|[Gustavo Figueiredo](https://github.com/gustavodsf)|
