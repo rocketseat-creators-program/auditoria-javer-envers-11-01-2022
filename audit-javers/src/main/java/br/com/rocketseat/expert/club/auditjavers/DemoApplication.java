@@ -1,4 +1,4 @@
-package dock.tech.poc.test.demo;
+package br.com.rocketseat.expert.club.auditjavers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

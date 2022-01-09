@@ -1,7 +1,5 @@
-package dock.tech.poc.test.demo;
+package br.com.rocketseat.expert.club.auditjavers;
 
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import io.github.resilience4j.retry.annotation.Retry;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +16,6 @@ public class TutorialController {
     private final TutorialService tutorialService;
 
     @GetMapping("/")
-    @CircuitBreaker(name = "backendC")
-    @Retry(name = "backendC")
     public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
         try {
             List<Tutorial> tutorials = tutorialService.getAllTutorials(title);
@@ -64,7 +60,7 @@ public class TutorialController {
             _tutorial.setTitle(tutorial.getTitle());
             _tutorial.setDescription(tutorial.getDescription());
             _tutorial.setPublished(tutorial.isPublished());
-            return new ResponseEntity<>(tutorialService.save(_tutorial), HttpStatus.OK);
+            return new ResponseEntity<>(tutorialService.update(_tutorial), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

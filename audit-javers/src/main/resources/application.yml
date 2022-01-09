@@ -1,24 +1,41 @@
 server:
-  port: 8082
+  port: 8081
 spring:
   datasource:
-    url: jdbc:h2:file:/data/demo
-    driverClassName: org.h2.Driver
-    username: sa
-    password: sa123
+    url: jdbc:postgresql://localhost:5432/javers
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: mysecretpassword
+    testWhileIdle: true
+    validationQuery: SELECT 1
   jpa:
     show-sql: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-  h2:
-    console:
-      enabled: true
-      path: /h2-ui
-
-expert:
-  app:
-    jwtSecret: expertClubSecretKey
-    jwtExpirationMs: 86400000
+javers:
+  mappingStyle: FIELD
+  algorithm: SIMPLE
+  commitIdGenerator: synchronized_sequence
+  prettyPrint: true
+  typeSafeValues: false
+  initialChanges: true
+  terminalChanges: true
+  packagesToScan:
+  auditableAspectEnabled: true
+  springDataAuditableRepositoryAspectEnabled: true
+  prettyPrintDateFormats:
+    localDateTime: 'dd MMM yyyy, HH:mm:ss'
+    zonedDateTime: 'dd MMM yyyy, HH:mm:ssZ'
+    localDate: 'dd MMM yyyy'
+    localTime: 'HH:mm:ss'
+  sqlSchema:
+  sqlSchemaManagementEnabled: true
+  sqlGlobalIdCacheDisabled: false
+  objectAccessHook: org.javers.hibernate.integration.HibernateUnproxyObjectAccessHook
+  sqlGlobalIdTableName: expert_global_id
+  sqlCommitTableName: expert_commit
+  sqlSnapshotTableName: expert_snapshot
+  sqlCommitPropertyTableName: expert_commit_property

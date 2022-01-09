@@ -16,7 +16,6 @@ public class TutorialService {
     public List<Tutorial> getAllTutorials(String title){
         List<Tutorial> tutorials = new ArrayList<Tutorial>();
         try {
-            System.out.println("Entrei!");
             if (title == null)
                 tutorialRepository.findAll().forEach(tutorials::add);
             else
@@ -37,6 +36,11 @@ public class TutorialService {
     public Tutorial save(Tutorial tutorial){
         Tutorial _tutorial = tutorialRepository
                 .save(new Tutorial(tutorial.getTitle(), tutorial.getDescription(), false));
+        return _tutorial;
+    }
+
+    public Tutorial update(Tutorial tutorial){
+        Tutorial _tutorial = tutorialRepository.save(tutorial);
         return _tutorial;
     }
 

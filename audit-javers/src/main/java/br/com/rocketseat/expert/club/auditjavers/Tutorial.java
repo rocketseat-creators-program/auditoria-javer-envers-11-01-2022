@@ -1,4 +1,4 @@
-package dock.tech.poc.test.demo;
+package br.com.rocketseat.expert.club.auditjavers;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

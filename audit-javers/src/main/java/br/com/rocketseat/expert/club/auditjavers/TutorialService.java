@@ -1,7 +1,5 @@
-package dock.tech.poc.test.demo;
+package br.com.rocketseat.expert.club.auditjavers;
 
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import io.github.resilience4j.retry.annotation.Retry;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +13,6 @@ public class TutorialService {
 
     private final TutorialRepository tutorialRepository;
 
-    @CircuitBreaker(name = "backendB")
-    @Retry(name = "backendB")
     public List<Tutorial> getAllTutorials(String title){
         List<Tutorial> tutorials = new ArrayList<Tutorial>();
         try {
@@ -41,6 +37,11 @@ public class TutorialService {
     public Tutorial save(Tutorial tutorial){
         Tutorial _tutorial = tutorialRepository
                 .save(new Tutorial(tutorial.getTitle(), tutorial.getDescription(), false));
+        return _tutorial;
+    }
+
+    public Tutorial update(Tutorial tutorial) {
+        Tutorial _tutorial = tutorialRepository.save(tutorial);
         return _tutorial;
     }
 
